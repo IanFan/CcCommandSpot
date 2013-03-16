@@ -131,8 +131,10 @@
 		181D666316F455EF00F431EF /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 181D666216F455EF00F431EF /* vec4.c */; };
 		181D666816F455EF00F431EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D666716F455EF00F431EF /* main.m */; };
 		181D666B16F455EF00F431EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D666A16F455EF00F431EF /* AppDelegate.m */; };
-		181D666E16F455EF00F431EF /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D666D16F455EF00F431EF /* HelloWorldLayer.m */; };
-		181D667116F455EF00F431EF /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D667016F455EF00F431EF /* IntroLayer.m */; };
+		18CAF0C916F45BA600A22BB3 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CAF0C816F45BA600A22BB3 /* IntroLayer.m */; };
+		18CAF0CC16F45BDE00A22BB3 /* CommandSpotLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CAF0CB16F45BDE00A22BB3 /* CommandSpotLayer.m */; };
+		18CAF0CE16F45C9C00A22BB3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CAF0CD16F45C9C00A22BB3 /* Default-568h@2x.png */; };
+		18CAF0D116F46EA300A22BB3 /* CommandSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CAF0D016F46EA300A22BB3 /* CommandSpot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,10 +396,13 @@
 		181D666716F455EF00F431EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		181D666916F455EF00F431EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		181D666A16F455EF00F431EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		181D666C16F455EF00F431EF /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		181D666D16F455EF00F431EF /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		181D666F16F455EF00F431EF /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		181D667016F455EF00F431EF /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		18CAF0C716F45BA600A22BB3 /* IntroLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
+		18CAF0C816F45BA600A22BB3 /* IntroLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		18CAF0CA16F45BDE00A22BB3 /* CommandSpotLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandSpotLayer.h; sourceTree = "<group>"; };
+		18CAF0CB16F45BDE00A22BB3 /* CommandSpotLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandSpotLayer.m; sourceTree = "<group>"; };
+		18CAF0CD16F45C9C00A22BB3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		18CAF0CF16F46EA300A22BB3 /* CommandSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandSpot.h; sourceTree = "<group>"; };
+		18CAF0D016F46EA300A22BB3 /* CommandSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandSpot.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +428,7 @@
 		181D64D316F455EB00F431EF = {
 			isa = PBXGroup;
 			children = (
+				18CAF0CD16F45C9C00A22BB3 /* Default-568h@2x.png */,
 				181D64F116F455EB00F431EF /* CcCommandSpot */,
 				181D64DE16F455EB00F431EF /* Frameworks */,
 				181D64DD16F455EB00F431EF /* Products */,
@@ -458,10 +464,12 @@
 			children = (
 				181D666916F455EF00F431EF /* AppDelegate.h */,
 				181D666A16F455EF00F431EF /* AppDelegate.m */,
-				181D666C16F455EF00F431EF /* HelloWorldLayer.h */,
-				181D666D16F455EF00F431EF /* HelloWorldLayer.m */,
-				181D666F16F455EF00F431EF /* IntroLayer.h */,
-				181D667016F455EF00F431EF /* IntroLayer.m */,
+				18CAF0C716F45BA600A22BB3 /* IntroLayer.h */,
+				18CAF0C816F45BA600A22BB3 /* IntroLayer.m */,
+				18CAF0CA16F45BDE00A22BB3 /* CommandSpotLayer.h */,
+				18CAF0CB16F45BDE00A22BB3 /* CommandSpotLayer.m */,
+				18CAF0CF16F46EA300A22BB3 /* CommandSpot.h */,
+				18CAF0D016F46EA300A22BB3 /* CommandSpot.m */,
 				181D64F216F455EB00F431EF /* Resources */,
 				181D650C16F455EB00F431EF /* libs */,
 				181D666516F455EF00F431EF /* Supporting Files */,
@@ -895,6 +903,7 @@
 				181D650816F455EB00F431EF /* Icon@2x.png in Resources */,
 				181D650B16F455EB00F431EF /* iTunesArtwork in Resources */,
 				181D664916F455EE00F431EF /* ChangeLog in Resources */,
+				18CAF0CE16F45C9C00A22BB3 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,8 +1016,9 @@
 				181D666316F455EF00F431EF /* vec4.c in Sources */,
 				181D666816F455EF00F431EF /* main.m in Sources */,
 				181D666B16F455EF00F431EF /* AppDelegate.m in Sources */,
-				181D666E16F455EF00F431EF /* HelloWorldLayer.m in Sources */,
-				181D667116F455EF00F431EF /* IntroLayer.m in Sources */,
+				18CAF0C916F45BA600A22BB3 /* IntroLayer.m in Sources */,
+				18CAF0CC16F45BDE00A22BB3 /* CommandSpotLayer.m in Sources */,
+				18CAF0D116F46EA300A22BB3 /* CommandSpot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,6 +1122,7 @@
 				181D667616F455EF00F431EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
