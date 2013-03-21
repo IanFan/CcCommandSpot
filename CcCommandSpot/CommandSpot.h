@@ -11,6 +11,7 @@
 #import "cocos2d.h"
 
 typedef enum {
+  CommandChoiceType_None,
   CommandChoiceType_Base,
   CommandChoiceType_Spearman,
   CommandChoiceType_Footman,
@@ -18,33 +19,50 @@ typedef enum {
   CommandChoiceType_Archer,
 } CommandChoiceType;
 
+#pragma mark - COMMAND_BASE_UNIT
+@protocol CommandBaseUnitDelegate;
+
 @interface CommandBaseUnit : NSObject
 {
   CCLayer *_parentLayer;
 }
 
+@property BOOL isSelected;
+@property CommandChoiceType commandChoiceType;
 @property CGPoint position;
 @property CGRect frame;
-@property BOOL isSelected;
-@property (nonatomic,assign) NSMutableArray *choiceSpriteArray;
+
+@property (nonatomic,assign) NSMutableArray *choiceArray;
 @property (nonatomic,assign) CCSprite *baseSprite;
 @property (nonatomic,assign) CCSprite *tickSprite;
 
 -(void)setupCommandBaseWithParentLayer:(CCLayer*)parentL pos:(CGPoint)pos baseChioceType:(CommandChoiceType)baseChoiceType;
 
-//setup standard choice
--(void)setupStandardChoiceWithIsSpearman:(BOOL)isSpearman isFootman:(BOOL)isFootman isKnight:(BOOL)isKnight isArcher:(BOOL)isArcher;
+//Control
+-(void)showCommandChoice;
+-(void)hideCommandChoice;
 
-//-(void)setupStandardFormationWithIsLeftObliq
-
-//setup customized choice
--(void)addChoiceWithChoiceType:(CommandChoiceType)chioceType choicePos:(int)choicePos;
+//Info
+-(BOOL)isTouchedChoiceWithPoint:(CGPoint)point;
 
 @end
+
+#pragma mark - COMMAND_SPOT
 
 @interface CommandSpot : NSObject
 {
   CCLayer *_parentLayer;
 }
+
+@property (nonatomic,retain) NSMutableArray *baseUnitArray;
+@property (nonatomic,assign) CommandBaseUnit *touchedUnit;
+
+-(void)setupCommandSpotWithParentLayer:(CCLayer*)parentL;
+-(void)addCommandBaseUnit:(CommandBaseUnit*)baseUnit;
+
+//TouchEvent
+-(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+-(void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+-(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 
 @end

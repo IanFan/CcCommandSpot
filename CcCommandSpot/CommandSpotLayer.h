@@ -7,8 +7,12 @@
 //
 
 #import "cocos2d.h"
+#import "CommandSpot.h"
 
 @interface CommandSpotLayer : CCLayer
+{
+  CommandSpot *_commandSpot;
+}
 
 +(CCScene *) scene;
 
